@@ -33,10 +33,8 @@ export GOPATH="$HOME/.go"
 export PATH="$PATH:$(go env GOPATH)/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$(gem env user_gemhome)/bin"
 
 export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
-
-export GEM_HOME="$(gem env user_gemhome)"
-export PATH="$PATH:$GEM_HOME/bin"
 
 #export GAMEMODERUNEXEC="prime-run"
