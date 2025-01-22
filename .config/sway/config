@@ -207,6 +207,7 @@ for_window [app_id="floating"] floating enable
 #mouse_warping container
 
 exec batsignal -b -w 30 -c 15 -d 5 -m 1 -I aefjlaksjd &
+exec nm-applet &
 
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
