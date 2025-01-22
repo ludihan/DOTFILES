@@ -36,4 +36,7 @@ export PATH="$PATH:$HOME/.local/bin"
 
 export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
 
+export GEM_HOME="$(gem env user_gemhome)"
+export PATH="$PATH:$GEM_HOME/bin"
+
 #export GAMEMODERUNEXEC="prime-run"
