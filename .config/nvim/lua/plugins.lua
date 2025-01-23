@@ -45,6 +45,8 @@ require('lazy').setup({
                 'templ',
                 'pylsp',
                 'ruby_lsp',
+                'rubocop',
+                'sorbet',
             },
             handlers = {
                 function(server_name)

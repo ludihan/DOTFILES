@@ -10,8 +10,6 @@ alias grep='grep --color=auto'
 
 PS1='\[\e[92m\][\u@\h \W]\$\[\e[0m\] '
 
-bind '"\C-f":"echo oi\n"'
-
 export EDITOR='nvim'
 export VISUAL='nvim'
 
@@ -33,7 +31,8 @@ export GOPATH="$HOME/.go"
 export PATH="$PATH:$(go env GOPATH)/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.local/bin"
-export PATH="$PATH:$(gem env user_gemhome)/bin"
+
+eval "$(rbenv init -)"
 
 export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
 

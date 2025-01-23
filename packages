@@ -122,12 +122,12 @@ python-scipy
 python-seaborn
 python-tabulate
 raylib
+rbenv
 redis
 renderdoc
 ripgrep
 rofi-wayland
-ruby-docs
-ruby-stdlib
+ruby-build
 rust
 sane
 senpai
