@@ -73,6 +73,7 @@ linux-firmware
 lmms
 love
 lsix
+lsof
 man-db
 man-pages
 mariadb
@@ -112,7 +113,6 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 postgresql
-postgresql-libs
 prismlauncher
 pv
 python-black
@@ -138,7 +138,7 @@ smartmontools
 sof-firmware
 splint
 spotify-launcher
-steam
+strace
 sway
 swaybg
 swayidle

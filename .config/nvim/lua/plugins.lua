@@ -57,16 +57,7 @@ require('lazy').setup({
     },
 
     -- Themes
-    {
-        'sainnhe/gruvbox-material',
-        config = function()
-            local colorscheme = 'gruvbox-material'
-            local ok, _ = pcall(vim.cmd, 'colorscheme ' .. colorscheme)
-            if not ok then
-                vim.notify('colorscheme ' .. colorscheme .. ' not found!')
-            end
-        end,
-    },
+    { 'sainnhe/gruvbox-material' },
     { 'HiPhish/rainbow-delimiters.nvim' },
 
     --Telescope
@@ -100,6 +91,19 @@ require('lazy').setup({
     {
         'stevearc/oil.nvim',
         config = true,
+    },
+    {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "MunifTanjim/nui.nvim",
+        },
+        opts = {
+            window = {
+                position = "current"
+            }
+        }
     },
     {
         'LunarVim/bigfile.nvim',

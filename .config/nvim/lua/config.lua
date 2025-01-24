@@ -1,3 +1,33 @@
+vim.g.mapleader = ' '
+vim.g.maplocalleader = '\\'
+
+vim.opt.mouse = ''
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.signcolumn = 'yes'
+vim.opt.cursorline = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.shiftround = true
+vim.opt.expandtab = true
+vim.opt.cindent = true
+vim.opt.scrolloff = 5
+vim.opt.sidescrolloff = 5
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
+-- vim.opt.wrap = false
+vim.opt.termguicolors = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.guicursor = ''
+
+vim.g.omni_sql_no_default_maps = 1
+
+vim.cmd.colorscheme('gruvbox-material')
+
+vim.g.gruvbox_material_transparent_background = 1
+
 local lspconfig_defaults = require('lspconfig').util.default_config
 lspconfig_defaults.capabilities = vim.tbl_deep_extend(
     'force',
@@ -40,39 +70,9 @@ require('cmp').setup({
     mapping = cmp.mapping.preset.insert({}),
 })
 
-vim.opt.mouse = ''
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.signcolumn = 'yes'
-vim.opt.cursorline = true
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.shiftround = true
-vim.opt.expandtab = true
-vim.opt.cindent = true
-vim.opt.scrolloff = 5
-vim.opt.sidescrolloff = 5
-vim.opt.hlsearch = true
-vim.opt.incsearch = true
--- vim.opt.wrap = false
-vim.opt.termguicolors = true
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.guicursor = ''
-
-vim.g.omni_sql_no_default_maps = 1
-
-vim.g.gruvbox_material_transparent_background = 1
-
-vim.g.mapleader = ' '
-vim.g.maplocalleader = '\\'
-
 -- Open file explorer
-vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
-
--- Stop highlight
-vim.keymap.set('n', '<leader>h', '<CMD>nohlsearch<CR>')
+vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open directory (oil)' })
+vim.keymap.set('n', '<leader>-', '<CMD>Neotree<CR>', { desc = 'Open directory (neotree)' })
 
 -- Moving whole lines
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
@@ -90,10 +90,10 @@ vim.keymap.set('t', '<Esc>', '<C-\\><C-n><CR>')
 
 -- Telescope
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>f', builtin.find_files, {})
-vim.keymap.set('n', '<leader>g', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>b', builtin.buffers, {})
-vim.keymap.set('n', '<leader>z', builtin.help_tags, {})
+vim.keymap.set('n', '<leader>f', builtin.find_files)
+vim.keymap.set('n', '<leader>g', builtin.live_grep)
+vim.keymap.set('n', '<leader>b', builtin.buffers)
+vim.keymap.set('n', '<leader>z', builtin.help_tags)
 
 -- Clipboard
 vim.keymap.set({ 'n', 'x' }, '<leader>y', [["+y]])
@@ -102,18 +102,21 @@ vim.keymap.set({ 'n', 'x' }, '<leader>Y', [["+Y]])
 vim.keymap.set({ 'n', 'x' }, '<leader>P', [["+P]])
 
 -- Delete without yank
-vim.keymap.set({ 'n', 'x' }, '<leader>d', [["_d]])
-vim.keymap.set({ 'n', 'x' }, '<leader>x', [["_d]])
+vim.keymap.set({ 'n', 'x' }, '<leader>d', [["_d]], { desc = 'delete without yank' })
+vim.keymap.set({ 'n', 'x' }, '<leader>x', [["_d]], { desc = 'delete without yank' })
 
 -- Select everything quickly
-vim.keymap.set('n', '<leader>a', '<Esc>ggVG')
+vim.keymap.set('n', '<leader>a', '<Esc>ggVG', { desc = 'select all text' })
 
--- Whatever
+-- Write a blank line
 vim.keymap.set('n', '<leader>o', 'o<Esc>')
 vim.keymap.set('n', '<leader>O', 'O<Esc>')
 
 -- Esc is too far
-vim.keymap.set('n', '<C-c>', '<Esc>')
+vim.keymap.set({ 'n', 'v', 'i' }, '<C-c>', '<Esc>', { desc = 'same as pressing esc' })
+
+-- redraw screen
+vim.keymap.set('n', '<leader>h', '<CMD>:nohlsearch<CR>')
 
 -- quickfix
 vim.keymap.set('n', '<C-k>', '<cmd>cnext<CR>zz')
@@ -121,11 +124,10 @@ vim.keymap.set('n', '<C-j>', '<cmd>cprev<CR>zz')
 vim.keymap.set('n', '<leader>k', '<cmd>lnext<CR>zz')
 vim.keymap.set('n', '<leader>j', '<cmd>lprev<CR>zz')
 
--- dunno
-vim.keymap.set('n', 'Q', '<nop>')
-
 -- substitute everything
-vim.keymap.set('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+    { desc = 'substitute word under cursor globally on file' })
 
 -- format this
-vim.keymap.set('n', '<leader>w', '<CMD>%s/\\s\\+$//e<CR><CMD>:nohlsearch<CR>')
+vim.keymap.set('n', '<leader>f', '<CMD>%s/\\s\\+$//e<CR><CMD>:nohlsearch<CR>',
+    { desc = 'remove trailing spaces from file' })
