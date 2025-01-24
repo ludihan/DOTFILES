@@ -46,20 +46,12 @@ require('lazy').setup({
                 'pylsp',
                 'ruby_lsp',
                 'rubocop',
-                'sorbet',
+                'yamlls'
             },
             handlers = {
                 function(server_name)
                     require('lspconfig')[server_name].setup({})
                 end,
-                ruby_lsp = function()
-                    require('lspconfig').ruby_lsp.setup({
-                        init_options = {
-                            formatter = 'standard',
-                            linters = { 'standard' },
-                        },
-                    })
-                end
             },
         },
     },
