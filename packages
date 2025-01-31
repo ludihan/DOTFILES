@@ -11,6 +11,7 @@ bluez
 bluez-utils
 brightnessctl
 bsd-games
+chromium
 cmake
 cmus
 cowsay
@@ -43,7 +44,6 @@ github-cli
 gnome-themes-extra
 go
 godot
-godot-mono
 graphviz
 grim
 gst-plugin-pipewire
@@ -138,6 +138,7 @@ smartmontools
 sof-firmware
 splint
 spotify-launcher
+steam
 strace
 sway
 swaybg

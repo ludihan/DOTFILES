@@ -129,5 +129,5 @@ vim.keymap.set('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
     { desc = 'substitute word under cursor globally on file' })
 
 -- format this
-vim.keymap.set('n', '<leader>f', '<CMD>%s/\\s\\+$//e<CR><CMD>:nohlsearch<CR>',
+vim.keymap.set('n', '<leader>w', '<CMD>%s/\\s\\+$//e<CR><CMD>:nohlsearch<CR>',
     { desc = 'remove trailing spaces from file' })
