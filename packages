@@ -6,9 +6,7 @@ base-devel
 bash-completion
 batsignal
 blender
-blueman
 bluez
-bluez-utils
 brightnessctl
 bsd-games
 cmake
@@ -44,7 +42,6 @@ godot
 graphviz
 grim
 gst-plugin-pipewire
-helix
 htop
 hyprpicker
 imagemagick
@@ -56,7 +53,6 @@ iwd
 jdk21-openjdk
 jo
 jq
-julia
 kdenlive
 krita
 lazygit
@@ -100,7 +96,6 @@ nuklear
 nvidia
 nvidia-utils
 obs-studio
-obsidian
 obsidian-icon-theme
 otf-font-awesome
 pacman-contrib
@@ -122,7 +117,6 @@ python-tabulate
 raylib
 rbenv
 redis
-renderdoc
 ripgrep
 rofi-wayland
 ruby-build
