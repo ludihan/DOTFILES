@@ -7,7 +7,6 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias diff='diff --color=auto'
 
 PS1='\[\e[92m\][\u@\h \W]\$\[\e[0m\] '
 
@@ -20,6 +19,7 @@ alias lt='du -sh * | sort -h'
 alias s='du -sh'
 alias p='pacman'
 alias mirror='wl-mirror eDP-1'
+alias diff='diff --color=auto'
 alias lg='lazygit'
 alias v=$EDITOR
 alias g='git'
@@ -36,4 +36,4 @@ eval "$(rbenv init -)"
 
 export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
 
-export GAMEMODERUNEXEC="prime-run"
+#export GAMEMODERUNEXEC="prime-run"

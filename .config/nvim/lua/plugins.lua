@@ -93,6 +93,19 @@ require('lazy').setup({
         config = true,
     },
     {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "MunifTanjim/nui.nvim",
+        },
+        opts = {
+            window = {
+                position = "current"
+            }
+        }
+    },
+    {
         'LunarVim/bigfile.nvim',
         config = true,
     },
