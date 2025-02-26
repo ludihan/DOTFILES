@@ -36,6 +36,9 @@ cp ~/.gitconfig ~/dotfiles/
 echo "copying bashrc"
 cp ~/.bashrc ~/dotfiles/
 
+echo "copying bash_profile"
+cp ~/.bash_profile ~/dotfiles/
+
 echo "copying explicitly installed packages"
 pacman -Qqne  > ~/dotfiles/packages
 
