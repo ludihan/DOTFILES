@@ -15,7 +15,10 @@ cowsay
 croc
 dash
 discord
+distrobox
 docker
+dotnet-sdk
+dotnet-sdk-8.0
 dunst
 efibootmgr
 fasm
@@ -30,7 +33,6 @@ firefox
 foot
 foot-terminfo
 fortune-mod
-fwupd
 fzf
 gamemode
 gimp
@@ -44,6 +46,7 @@ grim
 gst-plugin-pipewire
 htop
 hyprpicker
+i3status
 imagemagick
 imv
 intel-ucode
@@ -95,7 +98,6 @@ npm
 nuklear
 nvidia
 nvidia-utils
-obs-studio
 obsidian-icon-theme
 otf-font-awesome
 pacman-contrib
@@ -105,9 +107,9 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 postgresql
-prismlauncher
 pv
 python-black
+python-flask
 python-matplotlib
 python-opencv
 python-pandas
@@ -127,6 +129,7 @@ sipcalc
 slurp
 smartmontools
 sof-firmware
+speedtest-cli
 splint
 spotify-launcher
 steam
